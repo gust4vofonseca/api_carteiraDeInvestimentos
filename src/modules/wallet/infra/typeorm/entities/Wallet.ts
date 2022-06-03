@@ -11,7 +11,6 @@ class Wallet {
     @Column()
     name: String;
 
-
     @Column()
     user_id: string;
 

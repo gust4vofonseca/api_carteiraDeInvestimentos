@@ -1,5 +1,5 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn } from "typeorm";
-import { Wallet } from "./Wallet";
+import { Wallet } from "@modules/wallet/infra/typeorm/entities/Wallet";
 import { v4 as uuidV4 } from "uuid";
 
 @Entity("actions")
