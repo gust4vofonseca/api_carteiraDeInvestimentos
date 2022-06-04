@@ -13,7 +13,6 @@ class CreateActionsUseCase {
     ) {}
 
     async execute ({name, initials, value, purchase, quantity, wallet_id}: ICreateActionsDTO, user_id: string): Promise<void> {
-
         const wallet = await this.walletRepository.findById(wallet_id);
 
         if (wallet.user_id !== user_id) {
