@@ -15,10 +15,10 @@ class Actions {
     initials: string;
 
     @Column()
-    purchaseQuantity: number;
+    quantity: number;
 
-    @Column()
-    value: number;
+    @Column({type: "float"})
+    value: number
 
     @Column()
     purchase: boolean;
@@ -26,7 +26,9 @@ class Actions {
     @Column()
     wallet_id: string;
 
-    @ManyToOne(() => Wallet)
+    @ManyToOne(() => Wallet, {
+        cascade: true,
+    })
     @JoinColumn({name: "wallet_id"})
     wallet: Wallet;
 
