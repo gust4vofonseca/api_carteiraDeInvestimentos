@@ -20,7 +20,7 @@ class ActionsRepository implements IActionsRepository  {
             initials, 
             value, 
             quantity, 
-            purchase, 
+            purchase: purchase ? true : false, 
             wallet_id
         });
 

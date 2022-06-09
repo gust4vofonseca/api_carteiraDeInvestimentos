@@ -10,7 +10,7 @@ class DeleteUserUseCase {
         private userRepository: IUsersRepository,
         @inject("WalletRepository")
         private walletRepository: IWalletRepository,
-        @inject("ActionsRepository")
+        @inject("ActionRepository")
         private actionsRepository: IActionsRepository
     ) {}
 

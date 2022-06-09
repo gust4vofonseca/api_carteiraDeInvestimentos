@@ -6,13 +6,12 @@ import { DeleteWalletUseCase } from "./DeleteWalletUseCase";
 class DeleteWalletController {
     async handle(request: Request, response: Response): Promise<Response> {
         const  user  = request.user;
-        const user_id = user.id;
-
+        console.log(user);
         const { id } = request.body; 
 
         const deleteWalletUseCase = container.resolve(DeleteWalletUseCase);
 
-        deleteWalletUseCase.execute(id, user_id);
+        deleteWalletUseCase.execute(id, user.id);
 
         return response.status(201).send();
     }
